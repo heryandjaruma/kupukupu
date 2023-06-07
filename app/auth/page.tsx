@@ -1,6 +1,5 @@
 "use client"
 
-import { Metadata } from "next"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { signIn } from "next-auth/react"
@@ -9,11 +8,6 @@ import { FcGoogle } from "react-icons/fc"
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-
-export const metadata: Metadata = {
-  title: "Login",
-  description: "Continue with your account",
-}
 
 export default function LoginPage() {
   return (
