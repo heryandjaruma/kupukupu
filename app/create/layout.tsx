@@ -63,12 +63,12 @@ export default function CreateLayout({
 
         <div>
           <div className="grid grid-cols-2 place-items-center">
-            <div>
+            <div className="justify-self-start">
               {current?.prevStep && (
                 <>
                   <Link
                     href={current.prevStep}
-                    className={cn(buttonVariants(), `max-w-fit`)}
+                    className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
                   >
                     <ChevronLeft className="h-4 w-4" />
                     Back
@@ -76,12 +76,13 @@ export default function CreateLayout({
                 </>
               )}
             </div>
-            <div>
+
+            <div className="justify-self-end">
               {current?.nextStep && (
                 <>
                   <Link
                     href={current.nextStep}
-                    className={cn(buttonVariants(), "max-w-fit")}
+                    className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
                   >
                     Next
                     <ChevronRight className="h-4 w-4" />

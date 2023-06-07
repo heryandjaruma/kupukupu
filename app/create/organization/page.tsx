@@ -1,3 +1,23 @@
+import { Plus } from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import OrganizationCard from "@/components/organization-card"
+
 export default function Page() {
-  return <div>THIS IS PAGE ORG</div>
+  return (
+    <div className="w-full space-y-2">
+      <div className="mb-5 text-slate-600">
+        <span className="font-semibold">Tip:</span> Fill fill out the{" "}
+        <span>description</span> with some simple words, and let our AI do the
+        rest for you.
+      </div>
+
+      <div className="space-y-4">
+        <OrganizationCard />
+        <Button className="w-full">
+          <Plus /> Add organization
+        </Button>
+      </div>
+    </div>
+  )
 }

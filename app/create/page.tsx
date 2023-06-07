@@ -1,11 +1,5 @@
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
-
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Separator } from "@/components/ui/separator"
 
 export default function Page() {
   return (
