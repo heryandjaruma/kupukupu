@@ -10,7 +10,7 @@ export default function SiteFooter() {
       <div className="flex w-full flex-row items-center justify-around">
         <Icons.logo className="h-36 w-36" />
 
-        <div className="flex flex-row space-x-6 py-6">
+        <div className="grid grid-cols-4 place-items-start gap-6 py-6">
           <div className="space-y-8">
             <h1 className="text-lg font-semibold">Services</h1>
 
