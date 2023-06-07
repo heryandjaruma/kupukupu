@@ -1,6 +1,9 @@
+"use client"
+
 import { Metadata } from "next"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
+import { signIn } from "next-auth/react"
 import { FcGoogle } from "react-icons/fc"
 
 import { cn } from "@/lib/utils"
@@ -9,7 +12,7 @@ import { Icons } from "@/components/icons"
 
 export const metadata: Metadata = {
   title: "Login",
-  description: "Login to your account",
+  description: "Continue with your account",
 }
 
 export default function LoginPage() {
@@ -38,7 +41,7 @@ export default function LoginPage() {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <Button>
+          <Button onClick={() => signIn("google", { callbackUrl: "/" })}>
             <FcGoogle className="mr-2" /> Continue with Google
           </Button>
         </div>

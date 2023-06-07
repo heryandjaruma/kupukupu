@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
 
 export default function IndexPage() {
@@ -21,22 +21,28 @@ export default function IndexPage() {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link
-            href={siteConfig.links.docs}
+          <Button asChild>
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
+
+          {/* <Link
+            // href={siteConfig.links.docs}
+            href={`/dashboard/home`}
             target="_blank"
             rel="noreferrer"
             className={buttonVariants()}
           >
             Dashboard
-          </Link>
-          <Link
+          </Link> */}
+
+          {/* <Link
             target="_blank"
             rel="noreferrer"
             href={siteConfig.links.github}
             className={buttonVariants({ variant: "outline" })}
           >
             GitHub
-          </Link>
+          </Link> */}
         </div>
       </section>
     </div>
