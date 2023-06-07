@@ -76,7 +76,7 @@ export default function DashboardLayout({
             <Button
               variant="ghost"
               className="w-full justify-start text-red-500"
-              onClick={() => signOut()}
+              onClick={() => signOut({ callbackUrl: "/" })}
             >
               <LogOut className="mr-2 h-4 w-4" />
               Log Out

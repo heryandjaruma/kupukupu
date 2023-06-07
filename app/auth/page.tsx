@@ -41,7 +41,9 @@ export default function LoginPage() {
           </p>
         </div>
         <div className="flex items-center justify-center">
-          <Button onClick={() => signIn("google", { callbackUrl: "/" })}>
+          <Button
+            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+          >
             <FcGoogle className="mr-2" /> Continue with Google
           </Button>
         </div>
