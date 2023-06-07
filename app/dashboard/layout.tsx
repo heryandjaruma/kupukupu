@@ -3,7 +3,14 @@
 import React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ChevronLeft, FileText, Home, LogOut } from "lucide-react"
+import {
+  ChevronLeft,
+  FileText,
+  Home,
+  LayoutDashboard,
+  LogOut,
+  User,
+} from "lucide-react"
 import { signOut, useSession } from "next-auth/react"
 
 import { cn } from "@/lib/utils"
@@ -30,7 +37,7 @@ export default function DashboardLayout({
       <div className="flex">
         <div className="sticky top-0 flex h-screen flex-col justify-between p-4">
           <div className="space-y-3">
-            <div className="flex items-center space-x-1">
+            <div className="flex max-w-fit items-center justify-between space-x-1">
               <Link
                 href="/"
                 className={cn(
@@ -56,8 +63,19 @@ export default function DashboardLayout({
                 "w-full justify-start"
               )}
             >
-              <Home className="mr-2 h-4 w-4" />
+              <LayoutDashboard className="mr-2 h-4 w-4" />
               Dashboard
+            </Link>
+
+            <Link
+              href={`/dashboard`}
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                "w-full justify-start"
+              )}
+            >
+              <User className="mr-2 h-4 w-4" />
+              Account Settings
             </Link>
           </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Check } from "lucide-react"
 
@@ -55,7 +56,7 @@ export default function IndexPage() {
       <Separator />
 
       <div
-        id="open-ai"
+        id="feature"
         className="grid grid-cols-1 place-items-center px-4 py-16 md:grid-cols-2 md:px-10"
       >
         <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-4 text-start text-gray-700 dark:text-white">
@@ -101,13 +102,13 @@ export default function IndexPage() {
         </div>
 
         <div className="">
-          {/* <Image
-            src={`/images/landing/open-ai.png`}
+          <Image
+            src={`/images/landing-1.jpg`}
             alt="open-ai"
-            width={640}
-            height={640}
+            width={1080}
+            height={1080}
             className="rounded-lg object-cover"
-          /> */}
+          />
         </div>
       </div>
 
@@ -116,13 +117,13 @@ export default function IndexPage() {
         className="grid grid-cols-1 place-items-center px-10 py-16 md:grid-cols-2"
       >
         <div>
-          {/* <Image
-            src={`/images/landing/feature.png`}
+          <Image
+            src={`/images/landing-2.jpg`}
             alt="open-ai"
-            width={640}
-            height={640}
+            width={1080}
+            height={1080}
             className="rounded-lg object-cover"
-          /> */}
+          />
         </div>
 
         <div className="flex w-full max-w-lg flex-col items-center justify-center space-y-4 text-start text-gray-700 dark:text-white">
@@ -206,13 +207,13 @@ export default function IndexPage() {
         </div>
 
         <div className="">
-          {/* <Image
-            src={`/images/landing/feature-2.png`}
+          <Image
+            src={`/images/landing-3.jpg`}
             alt="open-ai"
-            width={640}
-            height={640}
+            width={1080}
+            height={1080}
             className="rounded-lg object-cover"
-          /> */}
+          />
         </div>
       </div>
 
