@@ -4,6 +4,7 @@ import Link from "next/link"
 import { PlusSquare } from "lucide-react"
 
 import { Separator } from "@/components/ui/separator"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function Page() {
   return (
@@ -13,7 +14,7 @@ export default function Page() {
 
         <div className="grid grid-cols-4 gap-4">
           {/* <Button onClick={() => signOut()}>Sign Out</Button> */}
-          <div className="aspect-[3/4] w-64 rounded-lg border-2 border-dashed bg-slate-800">
+          <div className="aspect-[3/4] w-64 rounded-lg border-2 border-dashed bg-slate-100 dark:border-slate-200 dark:bg-slate-800">
             <Link
               href={`/create`}
               className="flex h-full w-full flex-col items-center justify-center"
@@ -25,10 +26,7 @@ export default function Page() {
 
           {/* dummies */}
           {Array.from({ length: 3 }).map((_, i) => (
-            <div
-              className="aspect-[3/4] w-64 animate-pulse rounded-lg bg-slate-800"
-              key={i}
-            ></div>
+            <Skeleton className="aspect-[3/4] w-64 rounded-lg" />
           ))}
         </div>
       </div>
@@ -40,10 +38,7 @@ export default function Page() {
 
         <div className="grid w-full grid-cols-4 gap-4">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              className="aspect-[3/4] w-64 animate-pulse rounded-lg bg-slate-800"
-              key={i}
-            ></div>
+            <Skeleton className="aspect-[3/4] w-64 rounded-lg" />
           ))}
         </div>
       </div>

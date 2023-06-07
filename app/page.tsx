@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
+import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
 export default function IndexPage() {
@@ -50,6 +51,8 @@ export default function IndexPage() {
           </Link> */}
         </div>
       </section>
+
+      <Separator />
 
       <div
         id="open-ai"
@@ -233,6 +236,8 @@ export default function IndexPage() {
           ))}
         </div>
       </div>
+
+      <SiteFooter />
     </div>
   )
 }
