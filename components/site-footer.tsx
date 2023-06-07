@@ -2,20 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Twitter } from "lucide-react"
 
+import { Icons } from "./icons"
+
 export default function SiteFooter() {
   return (
     <footer className="flex flex-col items-center justify-center bg-slate-100 pt-6">
       <div className="flex w-full flex-row items-center justify-around">
-        {/* <Image
-          src={`/images/icons/logo-legacy.svg`}
-          alt="logo legacy"
-          width={640}
-          height={640}
-          className="pointer-events-none w-72 select-none"
-          priority
-        /> */}
+        <Icons.logo className="h-36 w-36" />
 
-        <div className="flex flex-row space-x-6">
+        <div className="flex flex-row space-x-6 py-6">
           <div className="space-y-8">
             <h1 className="text-lg font-semibold">Services</h1>
 

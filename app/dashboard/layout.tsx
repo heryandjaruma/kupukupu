@@ -28,47 +28,60 @@ export default function DashboardLayout({
   return (
     <section>
       <div className="flex">
-        <div className="sticky top-0 h-screen w-56 space-y-3 p-4">
-          <div className="flex ">
+        <div className="sticky top-0 flex h-screen flex-col justify-between p-4">
+          <div className="space-y-3">
+            <div className="flex items-center space-x-1">
+              <Link
+                href="/"
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "w-full justify-start"
+                )}
+              >
+                <>
+                  <ChevronLeft className="mr-2 h-4 w-4" />
+                  {"  "}Home
+                </>
+              </Link>
+
+              <ThemeToggle />
+            </div>
+
+            <Separator />
+
             <Link
-              href="/"
+              href={`/dashboard`}
               className={cn(
                 buttonVariants({ variant: "ghost" }),
                 "w-full justify-start"
               )}
             >
-              <>
-                <ChevronLeft className="mr-2 h-4 w-4" />
-                {"  "}Home
-              </>
+              <Home className="mr-2 h-4 w-4" />
+              Dashboard
             </Link>
-
-            <ThemeToggle />
           </div>
 
-          <Separator />
+          <div className="space-y-3">
+            <div className="flex flex-col space-y-1">
+              <p className="text-sm font-medium capitalize leading-none">
+                {session?.user?.name}
+              </p>
+              <p className="text-xs leading-none text-muted-foreground">
+                {session?.user?.email}
+              </p>
+            </div>
 
-          <Link
-            href={`/dashboard`}
-            className={cn(
-              buttonVariants({ variant: "ghost" }),
-              "w-full justify-start"
-            )}
-          >
-            <Home className="mr-2 h-4 w-4" />
-            Dashboard
-          </Link>
+            <Separator />
 
-          <Button
-            variant="ghost"
-            className="w-full justify-start text-red-500"
-            onClick={() => signOut()}
-          >
-            <LogOut className="mr-2 h-4 w-4" />
-            Log Out
-          </Button>
-
-          <Separator />
+            <Button
+              variant="ghost"
+              className="w-full justify-start text-red-500"
+              onClick={() => signOut()}
+            >
+              <LogOut className="mr-2 h-4 w-4" />
+              Log Out
+            </Button>
+          </div>
         </div>
         <div className="p-4">{children}</div>
       </div>

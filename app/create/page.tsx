@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>THIS IS CREATE PAGE</div>
+  return <div className="w-full">THIS IS EXAMPLE CREATE PAGE</div>
 }

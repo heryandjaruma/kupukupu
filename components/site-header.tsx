@@ -61,7 +61,7 @@ export function SiteHeader() {
                   <DropdownMenuTrigger asChild>
                     <Avatar>
                       <AvatarImage src={session?.user.image} />
-                      <AvatarFallback>CN</AvatarFallback>
+                      <AvatarFallback>KK</AvatarFallback>
                     </Avatar>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56">
