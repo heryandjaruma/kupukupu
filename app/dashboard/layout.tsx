@@ -68,7 +68,7 @@ export default function DashboardLayout({
             </Link>
 
             <Link
-              href={`/dashboard`}
+              href={`/account`}
               className={cn(
                 buttonVariants({ variant: "ghost" }),
                 "w-full justify-start"
