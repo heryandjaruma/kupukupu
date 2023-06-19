@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
 import Spinner from "@/components/loading-spinner"
+import Redirect from "@/components/redirect"
 
 export default function Page() {
   return (
@@ -9,7 +9,8 @@ export default function Page() {
         <Spinner />
       </div>
       <h1>You will be able to see you CV directly on your Google Docs.</h1>
-      <Button>Add to My Google Docs</Button>
+      {/* <Button>Add to My Google Docs</Button> */}
+      <Redirect to="/create/download" delay={5000} />
     </div>
   )
 }
