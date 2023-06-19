@@ -18,6 +18,8 @@ export default function Page() {
         className="w-56 blur-sm"
       />
 
+      <p>Download your PDF or edit in Google Docs</p>
+
       <div className="grid grid-cols-3 place-items-center">
         <Link href="/dashboard" className={cn(buttonVariants({}), "")}>
           <LayoutDashboard /> Back to Dashboard
@@ -26,7 +28,7 @@ export default function Page() {
           <Download /> Download PDF
         </Button>
         <Button className="">
-          <FileText /> Edit on Google Docs
+          <FileText /> Edit in Google Docs
         </Button>
       </div>
     </div>

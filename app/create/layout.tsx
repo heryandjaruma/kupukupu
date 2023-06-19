@@ -56,40 +56,38 @@ export default function CreateLayout({
 
       <Separator className="my-3" />
 
-      <div className="w-full max-w-xl space-y-2">
+      <div className="w-full max-w-xl space-y-6">
         {children}
 
-        <Separator />
+        <Separator className="my-10" />
 
-        <div>
-          <div className="grid grid-cols-2 place-items-center">
-            <div className="justify-self-start">
-              {current?.prevStep && (
-                <>
-                  <Link
-                    href={current.prevStep}
-                    className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
-                  >
-                    <ChevronLeft className="h-4 w-4" />
-                    Back
-                  </Link>
-                </>
-              )}
-            </div>
+        <div className="grid grid-cols-2 place-items-center">
+          <div className="justify-self-start">
+            {current?.prevStep && (
+              <>
+                <Link
+                  href={current.prevStep}
+                  className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  Back
+                </Link>
+              </>
+            )}
+          </div>
 
-            <div className="justify-self-end">
-              {current?.nextStep && (
-                <>
-                  <Link
-                    href={current.nextStep}
-                    className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
-                  >
-                    Next
-                    <ChevronRight className="h-4 w-4" />
-                  </Link>
-                </>
-              )}
-            </div>
+          <div className="justify-self-end">
+            {current?.nextStep && (
+              <>
+                <Link
+                  href={current.nextStep}
+                  className={cn(buttonVariants(), "max-w-fit bg-blue-600")}
+                >
+                  Next
+                  <ChevronRight className="h-4 w-4" />
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
